@@ -33,11 +33,13 @@ class FlavorConfig {
   static bool isMock() => _instance!.flavor == Flavor.MOCK;
 }
 
-FlavorValues getDevelopFlavorValue() =>
-    FlavorValues(baseUrl: ServerConfig.getInstace().developBaseUrl ?? "");
+FlavorValues getDevelopFlavorValue(ServerConfig serverConfig) =>
+    FlavorValues(baseUrl: serverConfig.getDevelopBaseUrl());
 
-FlavorValues getProductionFlavorValue() =>
-    FlavorValues(baseUrl: ServerConfig.getInstace().productBaseUrl ?? "");
+FlavorValues getProductionFlavorValue(ServerConfig serverConfig) =>
+    FlavorValues(baseUrl: serverConfig.getProductBaseUrl());
 
-FlavorValues getMockFlavorValue() =>
-    FlavorValues(baseUrl: ServerConfig.getInstace().mockBaseUrl ?? "");
+FlavorValues getMockFlavorValue(ServerConfig serverConfig) =>
+    FlavorValues(baseUrl: serverConfig.getMockBaseUrl());
+
+

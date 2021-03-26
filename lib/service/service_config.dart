@@ -20,7 +20,7 @@ class ServerConfig {
       _restClient = Dio()
         ..options =
             BaseOptions(receiveTimeout: _timeOut, connectTimeout: _timeOut)
-        ..interceptors?.addAll(_interceptors);
+        ..interceptors?.addAll(_interceptors ?? [Interceptor()]);
     }
     return _restClient ?? Dio();
   }

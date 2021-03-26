@@ -1,8 +1,8 @@
 name: api_service
 description: Api Client with dio
-version: 0.0.1
+version: 0.0.3
 author: organization9596
-homepage: https://github.com/tranvantung95/api_service
+homepage: https://github.com/organization9596/api_service
 publish_to:  https://pub.dev/
 
 
